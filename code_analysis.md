@@ -317,7 +317,7 @@ ggplot(intakegeltot, aes(x=GROUP, y=GEL_INGESTION_CORRECTED_RABBIT)) + geom_boxp
                                            legend.title = element_text(face="bold", size = 15), legend.key.height = unit(.7, "cm")) 
 ```
 
-![](ISME_script_SILVA18_files/figure-html/analysis total gel ingestion-1.png)<!-- -->
+![](fig/analysis%20total%20gel%20ingestion-1.png)<!-- -->
 
 ## Pellet consumption
 
@@ -404,7 +404,8 @@ ggplot(intake, aes(AGE, CONSO, group = interaction(GROUP, type),
                                            legend.title = element_text(face="bold", size = 15), legend.key.height = unit(.7, "cm"))  
 ```
 
-![](ISME_script_SILVA18_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](fig/food%20pattern.png)<!-- -->
+
 
 ```r
 #focus gel consumption
@@ -420,7 +421,7 @@ conso_GROUP<-conso_GROUP + theme_classic()+theme(legend.position="right",axis.li
 conso_GROUP
 ```
 
-![](ISME_script_SILVA18_files/figure-html/unnamed-chunk-3-2.png)<!-- -->
+![](fig/kinetics%20gel%20consumption.png)<!-- -->
 
 # Microbiota analysis
 
@@ -484,7 +485,7 @@ clust_plot <- hclust(vegdist(Y, method = "bray"), method = "ward.D2")
 ggdendrogram(clust_plot, rotate = TRUE, size = 1)
 ```
 
-![](ISME_script_SILVA18_files/figure-html/hclust-1.png)<!-- -->
+![](fig/hclust-1.png)<!-- -->
 
 
 ## Alpha-diversity {.tabset}
@@ -526,7 +527,7 @@ df_cc$group<-factor(df_cc$group, levels=c("STAN", "STAP", "RFFP"))
 ggplot(df_cc, aes(x=age, y=OTU, fill=group)) + geom_bar(stat="identity", position=position_dodge()) + geom_errorbar(aes(ymin=OTU-OTU_se, ymax=OTU+OTU_se), width=.4, position=position_dodge(.9))+ theme_classic() + theme(legend.position="right",axis.line=element_line(size = 1, color = "black"), axis.ticks.length = unit(.2, "cm"), axis.text = element_text( size = 12, color = "black"),                         axis.title = element_text(face="bold", size = 15, color = "black"), legend.text = element_text( size = 12),                           legend.title = element_text(face="bold", size = 15), legend.key.height = unit(.7, "cm")) +  scale_fill_manual(values=col, breaks=c("STAN", "STAP", "RFFP"), labels=c("STA-", "STA+", "RFF+"), name="Groups") + ylab("Number of OTUs") + xlab ("Age") + ylim(0, 650)
 ```
 
-![](ISME_script_SILVA18_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](fig/nb%20OTU%20caecum.png)<!-- -->
 
 __Statistics (comparison STA-/STA+)__
 
@@ -653,7 +654,7 @@ df_cc$group<-factor(df_cc$group, levels=c("STAN", "STAP", "RFFP"))
 ggplot(df_cc, aes(x=age, y=InvSimpson, fill=group)) + geom_bar(stat="identity", position=position_dodge()) + geom_errorbar(aes(ymin=InvSimpson-InvSimpson_se, ymax=InvSimpson+InvSimpson_se), width=.4, position=position_dodge(.9))+ theme_classic() + theme(legend.position="right",axis.line=element_line(size = 1, color = "black"), axis.ticks.length = unit(.2, "cm"), axis.text = element_text( size = 12, color = "black"),                         axis.title = element_text(face="bold", size = 15, color = "black"), legend.text = element_text( size = 12),                           legend.title = element_text(face="bold", size = 15), legend.key.height = unit(.7, "cm")) +  scale_fill_manual(values=col, breaks=c("STAN", "STAP", "RFFP"), labels=c("STA-", "STA+", "RFF+"), name="Groups") + ylab("Inv Simpson index") + xlab ("Age") + ylim(0, 100)
 ```
 
-![](ISME_script_SILVA18_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](fig/invsimpson_cc.png)<!-- -->
 
 __Statistics (comparison STA-/STA+)__
 
