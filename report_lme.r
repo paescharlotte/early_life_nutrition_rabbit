@@ -1,3 +1,4 @@
+##code from CAUQUIL L.
 report_lme <- function(lme_result){
   list_model <- attributes(lme_result$pval[[1]])$row.names
   tmp <- matrix(0, ncol=length(list_model)+2, nrow=length(lme_result$names) ,dimnames=list(lme_result$names, c(paste(list_model[(seq(list_model))], "(p-val)"),"W", "p-val (W)")))
