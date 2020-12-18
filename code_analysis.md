@@ -344,9 +344,6 @@ ano[,3:4]<-round(ano[,3:4],3)
 datatable(ano, rownames=c("Intercept", "Age", "Group"))
 ```
 
-<!--html_preserve--><div id="htmlwidget-48e5359b6a41e6713e25" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-48e5359b6a41e6713e25">{"x":{"filter":"none","data":[["Intercept","Age","Group"],[1,5,2],[226,226,44],[3436.904,2313.417,0.87],[0,0,0.426]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>numDF<\/th>\n      <th>denDF<\/th>\n      <th>F.value<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
-
 ### Total pellets ingestion
 
 Does total pellets consumption differ between the three experimental groups ? 
@@ -377,9 +374,6 @@ summary<-summary(CONSOTOT1536 ~ GROUP, method="cross", fun=smean.sd, data=pellet
 summary[,2]<-round(summary[,2],3)
 datatable(summary)
 ```
-
-<!--html_preserve--><div id="htmlwidget-1ce9dd9e65ce044d0a09" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1ce9dd9e65ce044d0a09">{"x":{"filter":"none","data":[["1","2","3","4"],["RFFP","STAN","STAP","ALL"],[[346.393,80.161],[363.417,42.331],[346.004,60.479],[352.188,61.67]],[15,16,15,46],[0,0,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>GROUP<\/th>\n      <th>S<\/th>\n      <th>N<\/th>\n      <th>Missing<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 ## Graphical synthesis of the feeding pattern
 
