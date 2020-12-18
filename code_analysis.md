@@ -56,7 +56,7 @@ milk<-milk[milk[,8]>0,]
 boxplot(MILK_CONSUMED_RABBIT~AGE, data=milk, main="Original data")
 ```
 
-![](ISME_script_SILVA18_files/figure-html/cleaning data-1.png)<!-- -->
+![](fig/cleaning%20data-1.png)<!-- -->
 
 ```r
 SEmilk<-summarySE(milk, measurevar="MILK_CONSUMED_RABBIT", groupvars=c("AGE"), na.rm=TRUE)
@@ -109,7 +109,7 @@ milk$MILK_CONSUMED_RABBIT<-as.numeric(as.character(milk$MILK_CONSUMED_RABBIT))
 boxplot(MILK_CONSUMED_RABBIT~AGE, data=milk, main="Cleaned data")
 ```
 
-![](ISME_script_SILVA18_files/figure-html/cleaning data-2.png)<!-- -->
+![](fig/cleaning%20data-2.png)<!-- -->
 
 #### Statistics
 
