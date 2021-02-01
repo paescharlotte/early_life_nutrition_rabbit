@@ -41,7 +41,7 @@ library(magrittr)
 library(flextable)
 library(forcats)
 
-setwd("C:/Users/charlotte.paes/OneDrive - Ecole d'Ingénieurs de PURPAN/Productions scientifiques/Data paper ISME/nouveaux_fichiers") #to set up the working repository where you have saved the files 
+setwd("") #to set up the working repository where you have saved the files 
 source(file="report_lme.r") 
 source(file="ggrare.R") 
 col<-c("#FFCC00", "#FF6600", "#006600")
