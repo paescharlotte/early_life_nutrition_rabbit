@@ -352,9 +352,6 @@ ano[,3:4]<-round(ano[,3:4],3)
 datatable(ano, rownames=c("Intercept", "Age", "Group"))
 ```
 
-<!--html_preserve--><div id="htmlwidget-5165d1ea085eda6e4c93" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5165d1ea085eda6e4c93">{"x":{"filter":"none","data":[["Intercept","Age","Group"],[1,5,2],[226,226,44],[3436.904,2313.417,0.87],[0,0,0.426]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>numDF<\/th>\n      <th>denDF<\/th>\n      <th>F.value<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
-
 ### Total pellets ingestion
 
 Does total pellets consumption differ between the three experimental groups ? 
