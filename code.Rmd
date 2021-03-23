@@ -787,7 +787,7 @@ distance<-rbind(distance_18, distance_25, distance_30, distance_38, distance_58)
 
 ```{r, warning=FALSE, message=FALSE}
 #we manually curated the file "dist_cc_vv.txt" to only keep within-sample WuniFrac distance (new file "Within_distance_wunifrac.csv")
-distance_cc_vv_within<- read.table("C:/Users/charlotte.paes/OneDrive - Ecole d'Ingénieurs de PURPAN/Productions scientifiques/Data paper ISME/Within_distance_wunifrac_rajout.csv", header=TRUE, sep=";", dec=",")
+distance_cc_vv_within<- read.table("C:/Within_distance_wunifrac_rajout.csv", header=TRUE, sep=";", dec=",")
 distance_cc_vv_within$GROUP<-as.factor(as.character(distance_cc_vv_within$GROUP))
 
 dist<-distance_cc_vv_within%>%dplyr::select(.,AGE,DISTANCE)%>%dplyr::group_by(AGE)%>%dplyr::summarise_all(funs(mean,sd,se=sd/sqrt(n())))
